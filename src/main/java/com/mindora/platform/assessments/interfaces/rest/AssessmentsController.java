@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/assessments")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AssessmentsController {
 
     private final AssessmentCommandService commandService;
