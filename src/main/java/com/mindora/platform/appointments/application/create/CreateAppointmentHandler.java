@@ -18,8 +18,14 @@ public class CreateAppointmentHandler {
         Appointment appointment = new Appointment(
                 AppointmentId.newId(),
                 cmd.psychologistId(),
+                cmd.psychologistName(),
                 cmd.employeeId(),
-                cmd.dateTime(),
+                cmd.getDateTime(),
+                cmd.date(),
+                cmd.time(),
+                cmd.type(),
+                cmd.reason(),
+                cmd.notes(),
                 AppointmentStatus.SCHEDULED
         );
 

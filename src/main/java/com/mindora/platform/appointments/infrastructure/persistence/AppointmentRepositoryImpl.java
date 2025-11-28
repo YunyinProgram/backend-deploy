@@ -22,8 +22,14 @@ public class AppointmentRepositoryImpl implements AppointmentRepository {
         AppointmentJpaEntity entity = new AppointmentJpaEntity();
         entity.setId(appointment.getId().value());
         entity.setPsychologistId(appointment.getPsychologistId());
+        entity.setPsychologistName(appointment.getPsychologistName());
         entity.setEmployeeId(appointment.getEmployeeId());
         entity.setDateTime(appointment.getDateTime());
+        entity.setDate(appointment.getDate());
+        entity.setTime(appointment.getTime());
+        entity.setType(appointment.getType());
+        entity.setReason(appointment.getReason());
+        entity.setNotes(appointment.getNotes());
         entity.setStatus(appointment.getStatus());
 
         jpa.save(entity);
@@ -60,8 +66,14 @@ public class AppointmentRepositoryImpl implements AppointmentRepository {
         return new Appointment(
                 new AppointmentId(j.getId()),
                 j.getPsychologistId(),
+                j.getPsychologistName(),
                 j.getEmployeeId(),
                 j.getDateTime(),
+                j.getDate(),
+                j.getTime(),
+                j.getType(),
+                j.getReason(),
+                j.getNotes(),
                 j.getStatus()
         );
     }

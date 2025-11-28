@@ -5,6 +5,7 @@ import com.mindora.platform.appointments.application.delete.*;
 import com.mindora.platform.appointments.application.get.*;
 import com.mindora.platform.appointments.application.update.*;
 import com.mindora.platform.appointments.domain.model.Appointment;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,8 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/v1/appointments")
+@CrossOrigin(origins = "http://localhost:4200")
+@Tag(name = "Appointments-Controller", description = "Available Appointment Endpoints")
 public class AppointmentController {
 
     private final CreateAppointmentHandler createHandler;
