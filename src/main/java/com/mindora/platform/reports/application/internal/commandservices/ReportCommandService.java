@@ -6,4 +6,6 @@ import com.mindora.platform.reports.interfaces.rest.resources.ReportResource;
 public interface ReportCommandService {
 
     ReportResource createReport(CreateReportCommand command);
+
+    void deleteReport(Long reportId);
 }

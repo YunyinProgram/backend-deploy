@@ -41,4 +41,12 @@ public class ReportCommandServiceImpl implements ReportCommandService {
 
         return reportResourceAssembler.toResource(report);
     }
+
+    @Override
+    public void deleteReport(Long reportId) {
+        if (!reportRepository.existsById(reportId)) {
+            throw new IllegalArgumentException("Report with id " + reportId + " does not exist");
+        }
+        reportRepository.deleteById(reportId);
+    }
 }
