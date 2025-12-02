@@ -2,18 +2,10 @@ services:
   - type: web
     name: mindora-backend
     env: docker
-    dockerfilePath: ./Dockerfile
-    plan: free
-    region: oregon
     branch: main
-    healthCheckPath: /actuator/health
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
       - key: MINDORA_MYSQL_PWD
         sync: false
-      - key: TZ
-        value: America/Lima
-      - key: JAVA_OPTS
-        value: -Xmx512m -Xms256m
 

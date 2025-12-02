@@ -1,33 +1,6 @@
-# Git
-.git
-.gitignore
-.gitattributes
-
-# IDE
-.vscode
-.idea
-*.iml
-
-# Build artifacts
 target
-*.jar
-*.war
-
-# Docker
-docker-compose.yml
-Dockerfile
-.dockerignore
-
-# Documentation
-README.md
-*.md
-
-# Logs
+.git
+.idea
+.vscode
 *.log
-
-# OS
 .DS_Store
-Thumbs.db
-
-# Render specific
-render.yaml
