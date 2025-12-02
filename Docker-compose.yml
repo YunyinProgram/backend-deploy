@@ -1,0 +1,11 @@
+services:
+  mindora-backend:
+    image: mindora-backend:0.0.1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+        - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE}
+        - MINDORA_MYSQL_PWD=${MINDORA_MYSQL_PWD}
